@@ -1,26 +1,26 @@
 from django.shortcuts import render
-from .models import Maquina
-from .forms import MaquinaForm
+from .models import Repuesto
+from .forms import RepuestoForm
 
 def home(request):
-    ListaMaquina = Maquina.objects.all()
+    ListaRepuesto = Repuesto.objects.all()
     datos = {
-        'maquinas':ListaMaquina,
+        'Repuesto':ListaRepuesto,
     }
 
     return render(request, 'productos/index.html',datos)
 
 
-def form_maquina(request):
+def form_repuesto(request):
     datos = {
-        'form':MaquinaForm()
+        'form':RepuestoForm()
     }
 
     if(request.method == 'POST'):
-        formulario = MaquinaForm(request.POST)
+        formulario = RepuestoForm(request.POST)
         if formulario.is_valid():
             formulario.save()
             datos['mensaje'] = 'Guardado Correctamente'
         else:
             datos['mensaje'] = 'ERROR. Ya exíste este ID..'
-    return render(request,'productos/form_maquina.html',datos)
+    return render(request,'productos/form_repuesto.html',datos)

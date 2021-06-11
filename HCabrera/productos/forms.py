@@ -1,10 +1,10 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Maquina
+from .models import Repuesto
 
 
-class MaquinaForm(ModelForm):
+class RepuestoForm(ModelForm):
     class Meta:
-        model = Maquina
-        fields = ['idMaquina', 'marcaMaquina', 'modeloMaquina']
+        model = Repuesto
+        fields = ['idRepuesto', 'nombreRepuesto', 'maquina']
 

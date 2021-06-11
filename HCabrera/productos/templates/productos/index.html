@@ -137,21 +137,21 @@
 
     <!--▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ SECCIÓN 2 ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄-->
     <div class="tablaprueba">
-        <table border="1">Lista de Maquinas
+        <table border="1">Lista de Repuestos
             <tr>
                 <th>id</th>
                 <th>nombre</th>
-                <th>modelo</th>
+                <th>maquina</th>
             </tr>
-            {% for veh in maquinas%}
+            {% for veh in Repuesto%}
             <tr></tr>
-                <td>{{veh.idMaquina}}</td>
-                <td>{{veh.marcaMaquina}}</td>
-                <td>{{veh.modeloMaquina}}</td>
+                <td>{{veh.idRepuesto}}</td>
+                <td>{{veh.nombreRepuesto}}</td>
+                <td>{{veh.maquina}}</td>
             </tr>
             {% endfor %}
         </table>
-        <a class="mas" href="{% url 'form_maquina' %}">+</a>
+        <a class="mas" href="{% url 'form_repuesto' %}">+</a>
     </div>
     <section id="sec2">
         <!--█████ CONÓCENOS █████-->
