@@ -15,7 +15,6 @@ class Repuesto(models.Model):
    idRepuesto = models.IntegerField(primary_key=True,verbose_name='Id de repuesto')
    nombreRepuesto = models.CharField(max_length=20, verbose_name='Nombre repuesto')
    maquina = models.ForeignKey(Maquina, on_delete=models.CASCADE)
-   descripcionRepuesto = models.CharField(max_length=300, verbose_name='Descripción repuesto')
  
    def __str__(self):
 

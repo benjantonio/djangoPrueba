@@ -6,5 +6,5 @@ from .models import Repuesto
 class RepuestoForm(ModelForm):
     class Meta:
         model = Repuesto
-        fields = ['idRepuesto', 'nombreRepuesto', 'maquina','descripcionRepuesto']
+        fields = ['idRepuesto', 'nombreRepuesto', 'maquina']
 
