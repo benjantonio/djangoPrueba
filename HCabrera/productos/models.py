@@ -19,3 +19,13 @@ class Repuesto(models.Model):
    def __str__(self):
 
        return self.nombreRepuesto
+
+class Servicio(models.Model):
+    idServicio = models.IntegerField(primary_key=True,verbose_name='Id de servicio')
+    nombreServicio = models.CharField(max_length=25, verbose_name='Nombre servicio')
+    descripcionServicio = models.CharField(max_length=120, verbose_name='Descripcion servicio')
+ 
+    def __str__(self):
+
+       return self.nombreServicio
+       

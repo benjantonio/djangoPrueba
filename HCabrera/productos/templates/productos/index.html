@@ -136,6 +136,23 @@
     </section>
 
     <!--▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ SECCIÓN 2 ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄-->
+    <div class="tablaprueba">
+        <table border="1">Lista de Maquinas
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+                <th>modelo</th>
+            </tr>
+            {% for veh in maquinas%}
+            <tr></tr>
+                <td>{{veh.idMaquina}}</td>
+                <td>{{veh.marcaMaquina}}</td>
+                <td>{{veh.modeloMaquina}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a class="mas" href="{% url 'form_maquina' %}">+</a>
+    </div>
     <section id="sec2">
         <!--█████ CONÓCENOS █████-->
 
