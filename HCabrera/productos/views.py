@@ -23,4 +23,11 @@ def form_repuesto(request):
             datos['mensaje'] = 'Guardado Correctamente'
         else:
             datos['mensaje'] = 'ERROR. Ya exíste este ID..'
-    return render(request,'productos/form_repuesto.html',datos)
+    return render(request,'productos/form_repuesto.html',datos) 
+
+def form_mod_repuesto(request,id):
+    repuesto = Repuesto.object.get(idRepuesto)
+    datos = {
+        'form': RepuestoForm(instance=repuesto)
+    }
+    return render(request,'core/form_mod_repuesto.html',datos)
