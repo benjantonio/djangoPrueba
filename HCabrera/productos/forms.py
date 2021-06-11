@@ -8,3 +8,6 @@ class RepuestoForm(ModelForm):
         model = Repuesto
         fields = ['idRepuesto', 'nombreRepuesto', 'maquina','descripcionRepuesto']
 
+
+
+
