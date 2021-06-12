@@ -113,51 +113,34 @@
 
     
     <!--                               -->
-    <div class="ventana-contacto">
-      <div class="container">
-        <div class="screen">
-          <div class="screen-header">
-            <div class="screen-header-left">
-              <div class="screen-header-button close"></div>
-              <div class="screen-header-button maximize"></div>
-              <div class="screen-header-button minimize"></div>
-            </div>
-            <div class="screen-header-right">
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-            </div>
-          </div>
-          <div class="screen-body">
-            <div class="screen-body-item left">
-              <div class="app-title">
-        
+
+
+    <div class="formulario-agregar">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
               </div>
-              
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
             </div>
-            <div class="screen-body-item">
-              <form method="post" action="" id="formulario">
-                {% csrf_token %}
-              
-              <div class="app-form-group">
-                {{ form.as_table }}
-            </div> 
-                <div class="app-form-group buttons">
-                  <button type="submit" id="enviar" class="boton">ENVIAR</button>
-                  <input type="reset" class="btn btn-primary" id="limnpiar" value="Limpiar">
-                <div id="error" class="alert alert-success" role="alert">
-                    {{ mensaje }}
-                </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>AGREGAR</span><br>
+                  <span>REPUESTO</span>
                 </div>
               </div>
-            </form>
             </div>
-          </div>
         </div>
       </div>
     </div>
-  
-
 
 
 
@@ -259,12 +242,6 @@
   <i class="fa fa-whatsapp my-whatsappfloat"></i>
 </a>
 
-<div>
-
-
-
-
-</div>
 
 <!--█ JAVASCRIPT █-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -278,7 +255,7 @@
 <script>
   $( document ).ready(function() {
     console.log( "ready!" ); 
-    /*Definir clases de imput aqui*/
+    /*Definir clases de input aqui*/
 });
 </script>
 

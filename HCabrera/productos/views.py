@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Repuesto
 from .forms import RepuestoForm
 
+#LISTAR
 def home(request):
     ListaRepuesto = Repuesto.objects.all()
     datos = {
@@ -10,7 +11,7 @@ def home(request):
 
     return render(request, 'productos/index.html',datos)
 
-
+#AGREGAR
 def form_repuesto(request):
     datos = {
         'form':RepuestoForm()
@@ -25,7 +26,7 @@ def form_repuesto(request):
             datos['mensaje'] = 'ERROR. Ya exíste este ID..'
     return render(request,'productos/form_repuesto.html',datos)
 
-
+#MODIFICAR
 def form_mod_repuesto(request, id):
     repuesto = Repuesto.objects.get(idRepuesto=id)
 
@@ -34,3 +35,5 @@ def form_mod_repuesto(request, id):
     }
 
     return render(request, 'productos/form_mod_repuesto.html', datos)
+    
+#ELIMINAR
