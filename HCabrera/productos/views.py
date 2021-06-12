@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Repuesto
 from .forms import RepuestoForm
 
+#Listar
 def home(request):
     ListaRepuesto = Repuesto.objects.all()
     datos = {
@@ -10,7 +11,7 @@ def home(request):
 
     return render(request, 'productos/index.html',datos)
 
-
+#Agregar
 def form_repuesto(request):
     datos = {
         'form':RepuestoForm()

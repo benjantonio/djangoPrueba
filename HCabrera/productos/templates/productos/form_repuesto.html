@@ -112,9 +112,10 @@
     </header>
 
     
-    <!--                               -->
-    <div class="ventana-contacto">
-      <div class="container">
+    <!--▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ ✿AGREGAR FORMULARIO✿ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄-->
+    
+    <div class="ventana-contacto" >
+      <div class="container" style="margin-top: 140px">
         <div class="screen">
           <div class="screen-header">
             <div class="screen-header-left">
@@ -131,31 +132,43 @@
           <div class="screen-body">
             <div class="screen-body-item left">
               <div class="app-title">
-        
+                <span>AGREGAR</span><br>
+                <span>REPUESTOS</span>
               </div>
-              
             </div>
             <div class="screen-body-item">
-              <form method="post" action="" id="formulario">
+              <form method="post" action="" id="formulario2">
                 {% csrf_token %}
-              
-              <div class="app-form-group">
-                {{ form.as_table }}
-            </div> 
+                <div class="form_group">
+                    {{ form.as_table }}
+                </div>
                 <div class="app-form-group buttons">
-                  <button type="submit" id="enviar" class="boton">ENVIAR</button>
-                  <input type="reset" class="btn btn-primary" id="limnpiar" value="Limpiar">
-                <div id="error" class="alert alert-success" role="alert">
-                    {{ mensaje }}
+                  <input type="submit" class="boton" id="enviar2" value="Enviar">
+                  <input type="reset" class="boton" id="limpiar2" value="Limpiar">
                 </div>
-                </div>
+                
+                <div id="error2" class="alert alert-success" role="alert">
+                  {{ mensaje }}
               </div>
             </form>
+                <div id="grupoemail" class="app-form-group">
+              </div>
+                <div id="grupocelular" class="app-form-group celu">
+              </div>
+                <div id="grupomensaje" class="app-form-group message"> 
+              </div>
+                <div class="app-form-group buttons">
+                  
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
+
+    
   
 
 
@@ -165,7 +178,7 @@
 <!--▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ FORMULARIO REPUESTOS ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄-->
 
     
-
+<!--
     <div class="formulario-agregar2">
         <div class="row">
             <form method="post" action="" id="formulario2">
@@ -181,6 +194,7 @@
             </form>
         </div>
     </div>
+    -->
 
 
     
@@ -277,10 +291,13 @@
 <script src="{% static 'productos/js/script.js' %}"></script>
 
 <script>
-  $( document ).ready(function() {
-    console.log( "ready!" ); 
-    /*Definir clases de imput aqui*/
-});
+$( document ).ready(function() {
+    $("#id_idRepuesto").attr("class","app-form-control");
+    $("#id_nombreRepuesto").attr("class","app-form-control");
+    $("#id_maquina").attr("class","form-control");
+    $("#id_descripcionRepuesto").attr("class","app-form-control");
+  
+  });
 </script>
 
 
