@@ -111,18 +111,71 @@
         <!-----FIN---->
     </header>
 
-<!--BARRA CONÓCENOS-->
+    
+    <!--                               -->
+    <div class="ventana-contacto">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+            <div class="screen-header-right">
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+            </div>
+          </div>
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+        
+              </div>
+              
+            </div>
+            <div class="screen-body-item">
+              <form method="post" action="" id="formulario">
+                {% csrf_token %}
+              
+              <div class="app-form-group">
+                {{ form.as_table }}
+            </div> 
+                <div class="app-form-group buttons">
+                  <button type="submit" id="enviar" class="boton">ENVIAR</button>
+                  <input type="reset" class="btn btn-primary" id="limnpiar" value="Limpiar">
+                <div id="error" class="alert alert-success" role="alert">
+                    {{ mensaje }}
+                </div>
+                </div>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
 
-    <div class="formulario-agregar">
+
+
+
+
+<!--▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ FORMULARIO REPUESTOS ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄-->
+
+    
+
+    <div class="formulario-agregar2">
         <div class="row">
-            <form method="post" action="" id="formulario">
+            <form method="post" action="" id="formulario2">
                 {% csrf_token %}
                 <div class="form_group">
                     {{ form.as_table }}
                 </div>
-                <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
-                <input type="reset" class="btn btn-primary" id="limnpiar" value="Limpiar">
-                <div id="error" class="alert alert-success" role="alert">
+                <input type="submit" class="btn btn-danger" id="enviar2" value="Enviar">
+                <input type="reset" class="btn btn-primary" id="limnpiar2" value="Limpiar">
+                <div id="error2" class="alert alert-success" role="alert">
                     {{ mensaje }}
                 </div>
             </form>
@@ -130,18 +183,7 @@
     </div>
 
 
-    <nav class="navbar navbar-light bg-light">
-      <form class="form-inline">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">ID de repuesto</span>
-          </div>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-      </form>
-    </nav>
-
-
+    
   
 
 
@@ -150,6 +192,7 @@
 
   <!--█████ FOOTER INFERIOR █████-->
 
+<div>
   <div class="main-content">
     <div class="left box">
         <!--NOSOTROS-->
@@ -205,7 +248,7 @@
       <span class="far fa-copyright"></span><span> 2021 Todos los derechos reservados uwu.</span>
     </div>
   </div><!-----FIN---->
-
+</div>
 </footer>
 
 
@@ -233,16 +276,14 @@
 <script src="{% static 'productos/js/clima.js' %}"></script>
 <script src="{% static 'productos/js/script.js' %}"></script>
 
-</body>
-</html>
+<script>
+  $( document ).ready(function() {
+    console.log( "ready!" ); 
+    /*Definir clases de imput aqui*/
+});
+</script>
 
 
-
-
-
-    <script src="ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
-    <script src="cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
-    <script src="maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
 </body>
 
 
