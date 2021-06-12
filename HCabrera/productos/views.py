@@ -12,6 +12,11 @@ def home(request):
 
     return render(request, 'productos/index.html',datos)
 
+#FUNCIÓN PARA INGRESAR PANEL ADMIN
+
+def panel_admin(request):
+    return render(request, 'productos/panel_admin.html')
+
 # FUNCION PARA AGREGAR #
 
 def form_repuesto(request):

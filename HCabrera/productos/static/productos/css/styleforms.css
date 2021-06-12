@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* ✿BODY✿ ◕‿◕*/
+
+body {
+    
+    color: #000000;
+    background-image: url("../img/fondotextura.png");
+}
+
+
+
+/*-------------------------------------Form_repuesto.html------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+
+
+.formulario-agregar{
+    padding-top: 13vh;
+    padding-left: 10px;
+    
+}
+
+/* seccion portada */
+
+#secportada{
+    height: 2%;
+}
+
+.imagenportada{
+    width: 100%;
+}
+
+
+/* seccion titulo */
+.titulorepuestos{
+    color: #e6e6e6;
+    text-shadow: 2px 2px 4px #0000004b;
+    text-align: center;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.descripcionrepuestos{
+    color: #e6e6e6;
+    text-shadow: 2px 2px 4px #0000004b;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+/* estilo botones panel_admin */
+.button{position:relative;
+    padding:1em 1.5em;
+    border:none;
+    background-color:transparent;
+    cursor:pointer;
+    outline:0;
+    font-size:18px;
+}
+
+.button.type1{
+    color:#ffbb00;
+    
+}
+
+.button.type1.type1::after,.button.type1.type1::before{
+    content:"";
+    display:block;
+    position:absolute;
+    width:20%;
+    height:20%;
+    border:2px solid;
+    transition:all .6s ease;
+    border-radius:2px;
+    
+    
+}
+
+.button.type1.type1::after{
+    bottom:0;
+    right:0;
+    
+    border-color:transparent #ffbb00 #ffbb00 transparent;
+}
+
+.button.type1.type1::before{top:0;
+    left:0;
+    border-color:#ffbb00 transparent transparent #ffbb00;
+    
+}
+
+.button.type1.type1:hover:after,.button.type1.type1:hover:before{
+    width:100%;
+    height:100%;
+    
+}
+
+
+.boton1{
+    margin-left: 29vh;
+    margin-right: 5vh;
+    background-color: #00000070;
+}
+
+.boton2{
+    margin-left: 5vh;
+    margin-right: 29vh;
+    background-color: #00000070;
+}
+
+@media screen and (max-width: 1800px) {
+    .boton1{
+        margin-left: 22vh;
+    }
+    
+    .boton2{
+        margin-right: 22vh;
+    }
+}
+
+@media screen and (max-width: 1490px) {
+    .boton1{
+        margin-left: 15vh;
+    }
+    
+    .boton2{
+        margin-right: 15vh;
+    }
+}
+
+
+@media screen and (max-width: 1097px) {
+    .boton1{
+        margin-left: 8vh;
+    }
+    
+    .boton2{
+        margin-right: 8vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .boton1{
+        margin-left: 0vh;
+    }
+    
+    .boton2{
+        margin-top: 20px;
+        margin-left: 0vh;
+    }
+}
