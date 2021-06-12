@@ -329,10 +329,10 @@
                 <td class="titulostabla">{{veh.maquina}}</td>
                 <td class="titulostabla">{{veh.descripcionRepuesto}}</td>
                 <td>
-                    <a href="{% url 'form_mod_repuesto' veh.idRepuesto %}"><img src="{% static 'formulario/img/modificar.png' %}" alt="">Modificar</a>
+                    <a href="{% url 'form_mod_repuesto' veh.idRepuesto %}">Modificar</a>
                 </td>
                 <td>
-                    <a href="{% url 'form_mod_repuesto' veh.idRepuesto %}"><img src="{% static 'formulario/img/borrar.png' %}" alt="">Eliminar</a>
+                    <a href="{% url 'form_del_repuesto' veh.idRepuesto %}">Eliminar</a>
                 </td>
             </tr>
             {% endfor %}
