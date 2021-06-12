@@ -1190,6 +1190,25 @@ footer {
     }
 }
 
+/* BOTONES DE FORMULARIO AGREGAR */
+
+#enviar2 {
+    background: none;
+    border: none;
+    color: #f5d000;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+#limpiar2 {
+    background: none;
+    border: none;
+    color: #f5d000;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
 
 /*-------------FIN-------------*/
 
