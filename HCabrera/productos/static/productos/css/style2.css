@@ -13,7 +13,7 @@ body {
 
 
 /*========== HEADER SUPERIOR ==========*/
-.paneliniciarsion{
+.paneliniciarsesion{
     text-align: right;
     margin-left: 15vh;
 }
@@ -1258,8 +1258,4 @@ footer {
     padding-top: 13vh;
     padding-left: 10px;
     
-}
-
-.formulario-agregar{
-    padding-top: 120px;
 }
