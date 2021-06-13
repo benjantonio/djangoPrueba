@@ -35,27 +35,56 @@
         <img class="imagenportada" src="{% static 'productos/img/panelhcabrera2.png' %}" alt="imagenportada">
     </section>
   
-  
+  <!--BOTON VOLVER-->
+<div class="text-box">
+    <a href="{% url 'panel_admin' %}" class="btn btn-white btn-        animate">Volver</a>
+  </div>
   
   <section id="sectitulo">
-    <p class="titulorepuestos">MODIFICAR REPUESTO</p>
+    <p class="titulorepuestos">MODIFICAR</p>
   </section>
 
-    <div class="formulario-agregar">
-        <div class="row">
-            <form method="post" action="" id="formulario">
-                {% csrf_token %}
-                <div class="form_group">
-                    {{ form.as_table }}
-                </div>
-                <input type="submit" class="btn btn-danger" id="enviar" value="Modificar">
-                <input type="reset" class="btn btn-primary" id="limnpiar" value="Limpiar">
-                <div id="error" class="alert alert-success" role="alert">
-                    {{ mensaje }}
-                </div>
-            </form>
+  <div class="ventana-contacto" >
+    <div class="container">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+          </div>
         </div>
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-title">
+              <span>MODIFICAR</span><br>
+              <span>REPUESTO</span>
+            </div>
+          </div>
+          <div class="screen-body-item">
+            <form method="post" action="" id="form_agregar_repuestos">
+              {% csrf_token %}
+              <div class="form_group">
+                  {{ form.as_table }}
+              </div>
+              <input type="submit" class="btn btn-outline-success" id="enviar2" value="Enviar" onclick="mostrarAlerta()">
+                <input type="reset" class="btn btn-outline-warning" id="limpiar2" value="Limpiar" onclick="esconderAlerta()">
+              <div id="error2" role="alert"></div>
+                  <div class="errormensajeform">{{ mensaje }}</div>
+              </div>
+          </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
 
 

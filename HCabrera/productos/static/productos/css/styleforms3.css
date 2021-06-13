@@ -38,8 +38,9 @@ body {
     color: #e6e6e6;
     text-shadow: 2px 2px 4px #0000004b;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 .descripcionrepuestos{
@@ -290,3 +291,240 @@ body {
         transform: translateY(0px);
     }
 }
+
+/* VENTANA PARA AGREGAR Y MODIFICAR FORMULARIO */
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ventana-contacto {
+    display: flex;
+    min-height: 58vh;
+
+}
+
+.container {
+    max-width: 700px;
+    margin-top: 0vh;
+    margin-bottom: 20px;    
+}
+
+.screen {
+    position: relative;
+    background: #3e3e3e;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    border-radius: 15px;
+}
+
+.screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #4d4d4f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+}
+
+.screen-body {
+    display: flex;
+}
+
+.screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+
+.screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title {
+    flex-direction: column;
+    position: relative;
+    color: #f5d000;
+    font-size: 35px;
+}
+
+.app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #f5d000;
+}
+
+.app-contact {
+    margin-top: auto;
+    font-size: 14px;
+    color: #888;
+}
+
+.app-form-group {
+    margin-bottom: 15px;
+}
+
+.app-form-group.message {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: rgb(221, 221, 221);
+    font-size: 14px;
+    text-transform: initial;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+    color: #666;
+}
+
+.app-form-control:focus {
+    border-bottom-color: #ddd;
+}
+
+.app-form-control-incorrecto {
+    border-bottom: 2px solid rgb(199, 19, 19);
+}
+
+#bEnviar {
+    background: none;
+    border: none;
+    color: #f5d000;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+#bEnviar:hover {
+    color: #bed398;
+}
+
+.mensaje-contacto {
+    height: 10vh;
+}
+
+.dribbble {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 520px) {
+    .screen-body {
+        flex-direction: column;
+    }
+    .screen-body-item.left {
+        margin-bottom: 30px;
+    }
+    .app-title {
+        flex-direction: row;
+    }
+    .app-title span {
+        margin-right: 12px;
+    }
+    .app-title:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .screen-body {
+        padding: 40px;
+    }
+    .screen-body-item {
+        padding: 0;
+    }
+    .app-title {
+        font-size: 27px
+    }
+}
+
+
+
+
+
+
+
+
+#enviar2 {
+    background: none;
+    border: none;
+    color: #25df44;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    background-color: #0000002a;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    
+}
+#enviar2:hover {
+    color: #58ec71;
+}
+
+#limpiar2 {
+    background: none;
+    border: none;
+    color: #ffac13;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: #0000002a;
+}
+#limpiar2:hover {
+    color: #ffbe47;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: wihte;
+    color: white;
+}
+
+.errormensajeform{
+    color: #f5d000;
+}
+
