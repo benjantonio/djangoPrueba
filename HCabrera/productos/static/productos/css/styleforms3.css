@@ -161,6 +161,10 @@ body {
 
 /* TABLA REPUESTOS */
 
+.table{
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
 .tablarepuestos{
     margin-left: 20vh;
     margin-right: 20vh;
@@ -200,3 +204,5 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 2px 2px 4px #0000004b;
 }
+
+
