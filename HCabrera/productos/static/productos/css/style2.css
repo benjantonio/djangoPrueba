@@ -591,12 +591,12 @@ body {
 
 
 .tablarepuestos{
-    margin-left: 40vh;
-    margin-right: 30vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
 }
 
-.titulostabla{
-    padding-left: 20px;
+.titulotabla{
+    text-align: center;
 }
 
 /*FIN TIPO REPUESTOS*/

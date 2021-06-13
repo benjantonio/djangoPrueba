@@ -18,14 +18,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <!-- WHATSAPP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <!-- ANIMACIÓN AL CLICKEAR BOTÓN MENÚ -->
     <style>html {
         scroll-behavior: smooth;
     }</style>
 
     <!-- LINK A .CSS -->
-    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/style.css' %}">    
+    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/style2.css' %}">    
 </head>
+
+<script type="text/javascript">
+ 
+
+    function ConfirmDelete()
+        {
+            var respuesta = confirm("¿Estás seguro de que desesas eliminar este Repuesto?");
+            if (respuesta == true)
+            {
+                Swal.fire({
+                    title: "¡ELIMINADO!",
+                    text: "Se eliminado el repuesto con éxito ✔",
+                    icon: "success",
+                    footer: "La página se actualizará en 5 segundos.",
+                    backdrop: true,
+                    timer: 5000,
+                    timerProgressBar: true,
+                    showConfirmButton: false,
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    allowEnterKey: false,
+                });
+                return true;
+            }
+            else
+            {
+                return false
+            }
+        }
+        
+
+</script>
 
 <body onload="onLoad()">
 
@@ -313,7 +346,7 @@
 
      <!-- TABLA DE REPUESTOS -->
      <div class="tablarepuestos">
-        <table border="1">Lista de Repuestos
+        <table border="2" class="table titulotabla">Lista de Repuestos
             <tr>
                 <th>ID</th>
                 <th class="titulostabla">REPUESTO</th>
@@ -332,7 +365,7 @@
                     <a href="{% url 'form_mod_repuesto' veh.idRepuesto %}">Modificar</a>
                 </td>
                 <td>
-                    <a href="{% url 'form_del_repuesto' veh.idRepuesto %}">Eliminar</a>
+                    <a href="{% url 'form_del_repuesto' veh.idRepuesto %}" onclick="return ConfirmDelete()">Eliminar</a>
                 </td>
             </tr>
             {% endfor %}
@@ -561,6 +594,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="{% static 'productos/js/jquery.numeric.js' %}"></script>
     <script src="{% static 'productos/js/clima.js' %}"></script>

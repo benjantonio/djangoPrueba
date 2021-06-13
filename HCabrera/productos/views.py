@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Repuesto
 from .forms import RepuestoForm
+import time
 
 # FUNCION PARA LISTAR # 
 
@@ -9,7 +10,6 @@ def home(request):
     datos = {
         'Repuesto':ListaRepuesto,
     }
-
     return render(request, 'productos/index.html',datos)
 
 #FUNCIÓN PARA INGRESAR PANEL ADMIN
@@ -53,7 +53,7 @@ def form_mod_repuesto(request, id):
 # FUNCION PARA ELIMINAR #
 
 def form_del_repuesto(request, id):
+    time.sleep(5)
     repuesto = Repuesto.objects.get(idRepuesto=id)
     repuesto.delete()
-
     return redirect(to='home')
