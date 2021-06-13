@@ -206,3 +206,13 @@ body {
 }
 
 
+@media screen and (max-width: 858px) {
+    .tablarepuestos{
+        margin-left: 0vh;
+        margin-right: 0vh;
+    }
+
+    .imagenportada{
+        width: 100vh;
+    }
+}
