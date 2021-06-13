@@ -27,6 +27,7 @@ def form_repuesto(request):
         else:
             datos['mensaje'] = 'ERROR. Ya exíste este ID..'
 <<<<<<< HEAD
+<<<<<<< HEAD
     return render(request,'productos/form_repuesto.html',datos)
 
 
@@ -56,3 +57,13 @@ def home(request):
 =======
     return render(request,'productos/form_repuesto.html',datos)
 >>>>>>> parent of 8a155c2 (Modificación diseño tabla y creación mod_form)
+=======
+    return render(request,'productos/form_repuesto.html',datos) 
+
+def form_mod_repuesto(request,id):
+    repuesto = Repuesto.object.get(idRepuesto)
+    datos = {
+        'form': RepuestoForm(instance=repuesto)
+    }
+    return render(request,'core/form_mod_repuesto.html',datos)
+>>>>>>> parent of f2cfc5d (Modificación html formulario)
