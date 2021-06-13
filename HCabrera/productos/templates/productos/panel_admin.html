@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificar Repuesto</title>
+    <title>Agregar Repuesto</title>
     <link rel="stylesheet" type="text/css" href="maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
@@ -25,29 +25,50 @@
     }</style>
 
 
-    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/style2.css' %}">   
+    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/styleforms3.css' %}">   
 </head>
 
 <body>
 
+<!--SECCIÓN PORTADA-->
+<section id="secportada">
+  <img class="imagenportada" src="{% static 'productos/img/panelhcabrera2.png' %}" alt="imagenportada">
+</section>
 
- 
+<!--SECCIÓN PORTADA-->
+<section id="sectitulo">
+  <p class="titulorepuestos">REPUESTOS</p>
+  <p class="descripcionrepuestos">En este panel podrás agregar, eliminar o modificar los repuestos de su Empresa.</p>
+</section>
 
-    <div class="formulario-agregar">
-        <div class="row">
-            <form method="post" action="" id="formulario">
-                {% csrf_token %}
-                <div class="form_group">
-                    {{ form.as_table }}
-                </div>
-                <input type="submit" class="btn btn-danger" id="enviar" value="Modificar">
-                <input type="reset" class="btn btn-primary" id="limnpiar" value="Limpiar">
-                <div id="error" class="alert alert-success" role="alert">
-                    {{ mensaje }}
-                </div>
-            </form>
-        </div>
-    </div>
+<!--SECCIÓN BOTONES-->
+<section id="secbotones">
+  <div class="row botones">
+    <a class="col-sm-12 col-md-4 button type1 boton1">
+      Agregar Repuesto
+    </a>
+    
+      <a href="{% url 'panel_modificar_eliminar' %}" class="col-sm-12 col-md-4 button type1 boton2">
+      Modificar o Eliminar repuesto
+      </a>
+  </div>
+</section>
+    
+
+
+
+
+<!--█ JAVASCRIPT █-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="{% static 'productos/js/jquery.numeric.js' %}"></script>
+<script src="{% static 'productos/js/clima.js' %}"></script>
+<script src="{% static 'productos/js/script.js' %}"></script>
+
+</body>
+</html>
 
 
 

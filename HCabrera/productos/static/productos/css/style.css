@@ -589,16 +589,11 @@ body {
 
 /*▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ SECCIÓN 4 ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄*/
 
-
 .tablarepuestos{
-    margin-left: 40vh;
-    margin-right: 30vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    color: #ffffff;
 }
-
-.titulostabla{
-    padding-left: 20px;
-}
-
 /*FIN TIPO REPUESTOS*/
 
 .imagenRepuesto {
@@ -1249,13 +1244,3 @@ footer {
 
 
 
-
-/*-------------------------------------Form_repuesto.html------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------------*/
-
-
-.formulario-agregar{
-    padding-top: 13vh;
-    padding-left: 10px;
-    
-}

@@ -5,6 +5,21 @@
 const formulario = document.getElementById("formulario");
 const inputs = document.querySelectorAll("#formulario input");
 
+function ConfirmDelete()
+        {
+            var respuesta = confirm("¿Estás seguro de que desesas eliminar el Repuesto?");
+
+            if (respuesta == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false
+            }
+        }
+
+
 const validarFormulario = (e) => {
     if(e.target.name == 'nombre'){
         var nombre = $("#itNombre").val();
@@ -144,3 +159,23 @@ $(document).ready(function() {
         }
     });
 });
+
+$('.btn-del').on('click',function(e) {
+    e.preventDefault();
+    const href = $(this).attr('href')
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+    }).then((result) => {
+        if (result.value) {
+            document.location.href = href;
+        }
+    })
+})
+

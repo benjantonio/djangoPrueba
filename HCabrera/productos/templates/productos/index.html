@@ -18,13 +18,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <!-- WHATSAPP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <!-- ANIMACIÓN AL CLICKEAR BOTÓN MENÚ -->
     <style>html {
         scroll-behavior: smooth;
     }</style>
 
     <!-- LINK A .CSS -->
-    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/style2.css' %}">    
+    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/style.css' %}">    
 </head>
 
 <body onload="onLoad()">
@@ -54,7 +55,7 @@
               </div> 
 
               <div class="col-sm-12 col-md-1 paneliniciarsesion">
-                <a class="iniciarsesion" href="{% url 'form_repuesto' %}">Iniciar Sesión</a>
+                <a class="iniciarsesion" href="{% url 'panel_admin' %}">Iniciar Sesión</a>
               </div>
 
               
@@ -313,14 +314,12 @@
 
      <!-- TABLA DE REPUESTOS -->
      <div class="tablarepuestos">
-        <table border="1">Lista de Repuestos
+        <table border="2" class="table titulotabla">Lista de Repuestos
             <tr>
                 <th>ID</th>
                 <th class="titulostabla">REPUESTO</th>
                 <th class="titulostabla">MAQUINA</th>
                 <th class="titulostabla">DESCRIPCION</th>
-                <th scope="col">Modificar</th>
-                <th scope="col">Eliminar</th>
             </tr>
             {% for veh in Repuesto%}
             <tr></tr>
@@ -328,16 +327,9 @@
                 <td class="titulostabla">{{veh.nombreRepuesto}}</td>
                 <td class="titulostabla">{{veh.maquina}}</td>
                 <td class="titulostabla">{{veh.descripcionRepuesto}}</td>
-                <td>
-                    <a href="{% url 'form_mod_repuesto' veh.idRepuesto %}">Modificar</a>
-                </td>
-                <td>
-                    <a href="{% url 'form_del_repuesto' veh.idRepuesto %}">Eliminar</a>
-                </td>
             </tr>
             {% endfor %}
         </table>
-        <a class="mas" href="{% url 'form_repuesto' %}">+</a>
     </div>
 
 
