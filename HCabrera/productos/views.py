@@ -1,6 +1,7 @@
 from django.shortcuts import render
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from .models import Repuesto
 from .forms import RepuestoForm
 
@@ -36,6 +37,11 @@ def form_mod_repuesto(request, id):
     }
 
     return render(request, 'productos/form_mod_repuesto.html', datos)
+=======
+
+def home(request):
+    return render(request, 'productos/index.html')
+>>>>>>> parent of b967b03 (Incorporación form)
 =======
 
 def home(request):
