@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from .models import Repuesto
 from .forms import RepuestoForm
-import logging
-logger = logging.getLogger(__name__)
 
 #Listar
 def home(request):
@@ -18,7 +16,6 @@ def form_repuesto(request):
     datos = {
         'form':RepuestoForm()
     }
-    
 
     if(request.method == 'POST'):
         formulario = RepuestoForm(request.POST)
