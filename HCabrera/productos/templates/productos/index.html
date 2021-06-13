@@ -25,40 +25,8 @@
     }</style>
 
     <!-- LINK A .CSS -->
-    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/style2.css' %}">    
+    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/style.css' %}">    
 </head>
-
-<script type="text/javascript">
- 
-
-    function ConfirmDelete()
-        {
-            var respuesta = confirm("¿Estás seguro de que desesas eliminar este Repuesto?");
-            if (respuesta == true)
-            {
-                Swal.fire({
-                    title: "¡ELIMINADO!",
-                    text: "Se eliminado el repuesto con éxito ✔",
-                    icon: "success",
-                    footer: "La página se actualizará en 5 segundos.",
-                    backdrop: true,
-                    timer: 5000,
-                    timerProgressBar: true,
-                    showConfirmButton: false,
-                    allowOutsideClick: false,
-                    allowEscapeKey: false,
-                    allowEnterKey: false,
-                });
-                return true;
-            }
-            else
-            {
-                return false
-            }
-        }
-        
-
-</script>
 
 <body onload="onLoad()">
 
@@ -352,8 +320,6 @@
                 <th class="titulostabla">REPUESTO</th>
                 <th class="titulostabla">MAQUINA</th>
                 <th class="titulostabla">DESCRIPCION</th>
-                <th scope="col">Modificar</th>
-                <th scope="col">Eliminar</th>
             </tr>
             {% for veh in Repuesto%}
             <tr></tr>
@@ -361,16 +327,9 @@
                 <td class="titulostabla">{{veh.nombreRepuesto}}</td>
                 <td class="titulostabla">{{veh.maquina}}</td>
                 <td class="titulostabla">{{veh.descripcionRepuesto}}</td>
-                <td>
-                    <a href="{% url 'form_mod_repuesto' veh.idRepuesto %}">Modificar</a>
-                </td>
-                <td>
-                    <a href="{% url 'form_del_repuesto' veh.idRepuesto %}" onclick="return ConfirmDelete()">Eliminar</a>
-                </td>
             </tr>
             {% endfor %}
         </table>
-        <a class="mas" href="{% url 'form_repuesto' %}">+</a>
     </div>
 
 
@@ -594,7 +553,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="{% static 'productos/js/jquery.numeric.js' %}"></script>
     <script src="{% static 'productos/js/clima.js' %}"></script>

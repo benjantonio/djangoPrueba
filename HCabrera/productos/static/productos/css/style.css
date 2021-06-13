@@ -589,16 +589,11 @@ body {
 
 /*▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ SECCIÓN 4 ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄*/
 
-
 .tablarepuestos{
     margin-left: 20vh;
     margin-right: 20vh;
+    color: #ffffff;
 }
-
-.titulotabla{
-    text-align: center;
-}
-
 /*FIN TIPO REPUESTOS*/
 
 .imagenRepuesto {

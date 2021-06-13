@@ -28,6 +28,34 @@
     <link type="text/css" rel="stylesheet" href="{% static 'productos/css/styleforms3.css' %}">   
 </head>
 
+
+<script type="text/javascript">
+    function ConfirmDelete()
+        {
+            var respuesta = confirm("¿Estás seguro de que desesas eliminar este Repuesto?");
+            if (respuesta == true)
+            {
+                Swal.fire({
+                    title: "¡ELIMINADO!",
+                    text: "Se eliminado el repuesto con éxito ✔",
+                    icon: "success",
+                    footer: "La página se actualizará en 5 segundos.",
+                    backdrop: true,
+                    timer: 5000,
+                    timerProgressBar: true,
+                    showConfirmButton: false,
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    allowEnterKey: false,
+                });
+                return true;
+            }
+            else
+            {
+                return false
+            }
+        }
+</script>
 <body>
 
 <!--SECCIÓN PORTADA-->
@@ -35,26 +63,36 @@
   <img class="imagenportada" src="{% static 'productos/img/panelhcabrera2.png' %}" alt="imagenportada">
 </section>
 
-<!--SECCIÓN PORTADA-->
+
+
 <section id="sectitulo">
-  <p class="titulorepuestos">REPUESTOS</p>
-  <p class="descripcionrepuestos">En este panel podrás agregar, eliminar o modificar los repuestos de su Empresa.</p>
+  <p class="titulorepuestos">LISTA DE REPUESTOS</p>
 </section>
 
-<!--SECCIÓN BOTONES-->
-<section id="secbotones">
-  <div class="row botones">
-    <a class="col-sm-12 col-md-4 button type1 boton1">
-      Agregar Repuesto
-    </a>
-    
-      <a href="{% url 'panel_modificar_eliminar' %}" class="col-sm-12 col-md-4 button type1 boton2">
-      Modificar o Eliminar repuesto
-      </a>
-  </div>
-</section>
-    
-
+<div class="tablarepuestos">
+    <table border="2" class="table">
+        <tr>
+            <th class="titulotabla">ID</th>
+            <th class="titulotabla">REPUESTO</th>
+            <th class="titulotabla">MAQUINA</th>
+            <th class="titulotabla">DESCRIPCION</th>
+        </tr>
+        {% for veh in Repuesto%}
+        <tr></tr>
+            <td class="descripciontabla">{{veh.idRepuesto}}</td>
+            <td class="descripciontabla">{{veh.nombreRepuesto}}</td>
+            <td class="descripciontabla">{{veh.maquina}}</td>
+            <td class="descripciontabla">{{veh.descripcionRepuesto}}</td>
+            <td>
+                <a href="{% url 'form_mod_repuesto' veh.idRepuesto %}" class="descripcionmodificar">Modificar</a>
+            </td>
+            <td>
+                <a href="{% url 'form_del_repuesto' veh.idRepuesto %}" class="descripcioneliminar" onclick="return ConfirmDelete()">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
 
 
 
@@ -62,21 +100,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="{% static 'productos/js/jquery.numeric.js' %}"></script>
 <script src="{% static 'productos/js/clima.js' %}"></script>
 <script src="{% static 'productos/js/script.js' %}"></script>
 
-</body>
-</html>
-
-
-
-
-
-    <script src="ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
-    <script src="cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
-    <script src="maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
 </body>
 
 
