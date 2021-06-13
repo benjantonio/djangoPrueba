@@ -137,36 +137,28 @@
               </div>
             </div>
             <div class="screen-body-item">
-              <form method="post" action="" id="formulario2">
+              <form method="post" action="" id="form_agregar_repuestos">
                 {% csrf_token %}
                 <div class="form_group">
                     {{ form.as_table }}
+                </div>                          
+                <div class="app-form-group">
+                  <input type="submit" class="btn btn-outline-success" id="enviar2" value="Enviar" onclick="mostrarAlerta()">
+                  <input type="reset" class="btn btn-outline-warning" id="limpiar2" value="Limpiar" onclick="esconderAlerta()">
                 </div>
-              
-              
-                <div class="app-form-group buttons">
-                  <input type="submit" class="btn btn-outline-secondary" id="enviar2" value="Enviar">
-                  <input type="reset" class="btn btn-outline-warning" id="limpiar2" value="Limpiar">
-                </div>
-                  <div class="alert alert-danger d-flex align-items-center" role="alert">
-                    {{ mensaje }}
-                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                  </div>
-                  
-                </div>
-
-               
-            </form>
-
-
-                </div>
-              </div>
+                <div id="mensaje_alerta" style="display: none;">
+                    <div class="alert alert-danger d-flex align-items-center" role="alert" >
+                      {{ mensaje }}
+                      <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    </div>
+                </div>              
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+  
 
     
   
@@ -287,17 +279,9 @@
 
 <script src="{% static 'productos/js/jquery.numeric.js' %}"></script>
 <script src="{% static 'productos/js/clima.js' %}"></script>
-<script src="{% static 'productos/js/script.js' %}"></script>
+<script src="{% static 'productos/js/agregarFormulario.js' %}"></script>
 
-<script>
-$( document ).ready(function() {
-    $("#id_idRepuesto").attr("class","app-form-control");
-    $("#id_nombreRepuesto").attr("class","app-form-control");
-    $("#id_maquina").attr("class","form-control");
-    $("#id_descripcionRepuesto").attr("class","app-form-control");
-  
-  });
-</script>
+
 
 
 </body>

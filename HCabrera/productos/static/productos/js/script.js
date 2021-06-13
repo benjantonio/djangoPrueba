@@ -33,48 +33,7 @@ const validarFormulario = (e) => {
     };
 };
 
-const validarFormulario2 = (e) => {
-    var nombre = $("#itNombre").val();
-    var email = $("#itEmail").val();
-    var celular = $("#itCelular").val();
-    var mensaje = $("#itMensaje").val();
-    if(e.target.name == 'nombre'){
-        if (nombre =="" || nombre.length < 2){
-            document.getElementById('gruponombre').classList.add('app-form-control-incorrecto');
-            return false;
-        }else{
-            $("#mensaje1").fadeOut();
-            document.getElementById('gruponombre').classList.remove('app-form-control-incorrecto');
-        };
-    }else if (e.target.name == 'email'){
-        if (email =="" || !expr.test(email)){
-            document.getElementById('grupoemail').classList.add('app-form-control-incorrecto');
-            return false;
-        }else{
-            $("#mensaje2").fadeOut();
-            document.getElementById('grupoemail').classList.remove('app-form-control-incorrecto');
-        };
-    }else if (e.target.name == 'celular'){
-        if (celular =="" || celular.length < 8){
-            document.getElementById('grupocelular').classList.add('app-form-control-incorrecto');
-            return false;
-        }else{
-            $("#mensaje3").fadeOut();
-            document.getElementById('grupocelular').classList.remove('app-form-control-incorrecto');
-        };
-    }else if (e.target.name == 'mensaje'){
-        if (mensaje ==""){
-            document.getElementById('grupomensaje').classList.add('app-form-control-incorrecto');
-            return false;
-        }else{
-            $("#mensaje4").fadeOut();
-            document.getElementById('grupomensaje').classList.remove('app-form-control-incorrecto');
-        }
-    };
-};
-
-inputs.forEach((input) =>{
-    input.addEventListener('keyup', validarFormulario2);
+inputs.forEach((input) =>{    
     input.addEventListener('blur', validarFormulario);
 });
 
