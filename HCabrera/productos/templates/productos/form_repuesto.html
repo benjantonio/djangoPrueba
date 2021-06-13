@@ -137,28 +137,17 @@
               </div>
             </div>
             <div class="screen-body-item">
-              <form method="post" action="" id="formulario2">
+              <form method="post" action="" id="form_agregar_repuestos">
                 {% csrf_token %}
                 <div class="form_group">
                     {{ form.as_table }}
                 </div>
-              
-              
-                <div class="app-form-group buttons">
-                  <input type="submit" class="btn btn-outline-secondary" id="enviar2" value="Enviar">
-                  <input type="reset" class="btn btn-outline-warning" id="limpiar2" value="Limpiar">
+                <input type="submit" class="btn btn-outline-success" id="enviar2" value="Enviar" onclick="mostrarAlerta()">
+                  <input type="reset" class="btn btn-outline-warning" id="limpiar2" value="Limpiar" onclick="esconderAlerta()">
+                <div id="error2" role="alert"></div>
+                    <div class="errormensajeform">{{ mensaje }}</div>
                 </div>
-                  <div class="alert alert-danger d-flex align-items-center" role="alert">
-                    {{ mensaje }}
-                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                  </div>
-                  
-                </div>
-
-               
             </form>
-
-
                 </div>
               </div>
             </div>
@@ -177,7 +166,6 @@
 <!--▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ FORMULARIO REPUESTOS ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄-->
 
     
-<!--
     <div class="formulario-agregar2">
         <div class="row">
             <form method="post" action="" id="formulario2">
@@ -193,7 +181,7 @@
             </form>
         </div>
     </div>
-    -->
+    
 
 
     

@@ -1294,4 +1294,45 @@ footer {
 /*-------------------------------------------------------------------------------------------------------*/
 
 
+#enviar2 {
+    background: none;
+    border: none;
+    color: #25df44;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    background-color: #0000002a;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    
+}
+#enviar2:hover {
+    color: #58ec71;
+}
+
+#limpiar2 {
+    background: none;
+    border: none;
+    color: #ffac13;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: #0000002a;
+}
+#limpiar2:hover {
+    color: #ffbe47;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: wihte;
+    color: white;
+}
+
+.errormensajeform{
+    color: #f5d000;
+}
 
