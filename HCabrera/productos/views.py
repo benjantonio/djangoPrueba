@@ -26,6 +26,7 @@ def form_repuesto(request):
             datos['mensaje'] = 'Guardado Correctamente'
         else:
             datos['mensaje'] = 'ERROR. Ya exíste este ID..'
+<<<<<<< HEAD
     return render(request,'productos/form_repuesto.html',datos)
 
 
@@ -52,3 +53,6 @@ def home(request):
 def home(request):
     return render(request, 'productos/index.html')
 >>>>>>> parent of b967b03 (Incorporación form)
+=======
+    return render(request,'productos/form_repuesto.html',datos)
+>>>>>>> parent of 8a155c2 (Modificación diseño tabla y creación mod_form)
