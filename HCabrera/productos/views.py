@@ -23,7 +23,7 @@ def form_repuesto(request):
             formulario.save()
             datos['mensaje'] = 'Guardado Correctamente'
         else:
-            datos['mensaje'] = 'ERROR. Ya exíste este ID..'
+            datos['mensaje'] = '¡ERROR! Ya exíste el ID'
     return render(request,'productos/form_repuesto.html',datos)
 
 

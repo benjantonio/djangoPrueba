@@ -788,7 +788,7 @@ body {
 }
 
 #bEnviar:hover {
-    color: #bed398;
+    color: #98d3a2;
 }
 
 .mensaje-contacto {
@@ -835,12 +835,12 @@ body {
 /*ESTILO PARA ERRORES*/
 
 .errores {
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 10px rgba(45, 17, 168, 0.3);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background: rgba(214, 0, 0, 0.89);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    color: #fff;
+    color: rgb(7, 228, 106);
     display: none;
     font-size: 14px;
     margin-top: -40px;
@@ -879,7 +879,7 @@ body {
 @media screen and (max-width: 731px) {
     .errores {
         margin-left: -140px;
-        background: rgba(223, 1, 1, 0.747);
+        background: rgba(241, 3, 3, 0.747);
     }
 }
 
@@ -1190,6 +1190,15 @@ footer {
     }
 }
 
+
+.formulario-agregar{
+    padding-top: 13vh;
+    padding-left: 10px;
+    
+
+}
+
+
 /* BOTONES DE FORMULARIO AGREGAR */
 
 #enviar2 {
@@ -1199,6 +1208,11 @@ footer {
     font-size: 14px;
     cursor: pointer;
     outline: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#enviar2:hover {
+    color: #25df44;
 }
 
 #limpiar2 {
@@ -1209,6 +1223,13 @@ footer {
     cursor: pointer;
     outline: none;
 }
+#limpiar2:hover {
+    color: #dfee0b;
+}
+
+
+
+
 
 /*-------------FIN-------------*/
 
@@ -1273,8 +1294,4 @@ footer {
 /*-------------------------------------------------------------------------------------------------------*/
 
 
-.formulario-agregar{
-    padding-top: 13vh;
-    padding-left: 10px;
-    
-}
+
