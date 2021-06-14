@@ -8,230 +8,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Repuesto</title>
     <link rel="stylesheet" type="text/css" href="maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- FOOTER -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- WHATSAPP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- ANIMACIÓN AL CLICKEAR BOTÓN MENÚ -->
+    <style>html {
+        scroll-behavior: smooth;
+    }</style>
+
+
+    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/styleforms3.css' %}">   
 </head>
 
 <body>
-    <div class="row">
-        <form method="post" action="" id="formulario">
-            {% csrf_token %}
-            <div class="form_group">
-                {{ form.as_table }}
-            </div>
-            <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
-            <input type="reset" class="btn btn-primary" id="limnpiar" value="Limpiar">
-            <div id="error" class="alert alert-success" role="alert">
-                {{ mensaje }}
-            </div>
-<<<<<<< HEAD
-        </nav>
 
-        <script>
-          const body = document.querySelector("body");
-          const navbar = document.querySelector(".navbar");
-          const menuBtn = document.querySelector(".menu-btn");
-          const cancelBtn = document.querySelector(".cancel-btn");
-          menuBtn.onclick = ()=>{
-            navbar.classList.add("show");
-            menuBtn.classList.add("hide");
-            body.classList.add("disabled");
-          }
-          cancelBtn.onclick = ()=>{
-            body.classList.remove("disabled");
-            navbar.classList.remove("show");
-            menuBtn.classList.remove("hide");
-          }
-          window.onscroll = ()=>{
-            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-          }
-        </script>
-        <!-----FIN---->
-    </header>
-
-    
-    <!--                               -->
-    <div class="ventana-contacto">
-      <div class="container">
-        <div class="screen">
-          <div class="screen-header">
-            <div class="screen-header-left">
-              <div class="screen-header-button close"></div>
-              <div class="screen-header-button maximize"></div>
-              <div class="screen-header-button minimize"></div>
-            </div>
-            <div class="screen-header-right">
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-            </div>
-          </div>
-          <div class="screen-body">
-            <div class="screen-body-item left">
-              <div class="app-title">
-        
-              </div>
-              
-            </div>
-            <div class="screen-body-item">
-              <form method="post" action="" id="formulario">
-                {% csrf_token %}
-              
-              <div class="app-form-group">
-                {{ form.as_table }}
-            </div> 
-                <div class="app-form-group buttons">
-                  <button type="submit" id="enviar" class="boton">ENVIAR</button>
-                  <input type="reset" class="btn btn-primary" id="limnpiar" value="Limpiar">
-                <div id="error" class="alert alert-success" role="alert">
-                    {{ mensaje }}
-                </div>
-                </div>
-              </div>
-            </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--SECCIÓN PORTADA-->
+    <section id="secportada">
+        <img class="imagenportada" src="{% static 'productos/img/panelhcabrera2.png' %}" alt="imagenportada">
+    </section>
+  
+  <!--BOTON VOLVER-->
+<div class="text-box">
+    <a href="{% url 'panel_admin' %}" class="btn btn-white btn-        animate">Volver</a>
+  </div>
+  
+  <section id="sectitulo">
+    <p class="titulorepuestos">AGREGAR</p>
+  </section>
   
 
-
-
-
-
-<!--▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ FORMULARIO REPUESTOS ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄-->
-
-    
-
-    <div class="formulario-agregar2">
-        <div class="row">
-            <form method="post" action="" id="formulario2">
-                {% csrf_token %}
-                <div class="form_group">
-                    {{ form.as_table }}
-                </div>
-                <input type="submit" class="btn btn-danger" id="enviar2" value="Enviar">
-                <input type="reset" class="btn btn-primary" id="limnpiar2" value="Limpiar">
-                <div id="error2" class="alert alert-success" role="alert">
-                    {{ mensaje }}
-                </div>
-            </form>
+  <div class="ventana-contacto" >
+    <div class="container">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+          </div>
         </div>
-=======
-        </form>
->>>>>>> parent of f2cfc5d (Modificación html formulario)
-    </div>
-
-    <div>
-
-<<<<<<< HEAD
-    
-  
-
-
- <!--▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ FOOTER ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄-->
- <footer>
-
-  <!--█████ FOOTER INFERIOR █████-->
-
-<div>
-  <div class="main-content">
-    <div class="left box">
-        <!--NOSOTROS-->
-      <h2 class="titulofooter">Nosotros</h2>
-      <div class="content">
-        <p class="textofooter">Contamos con más de <strong>25 años</strong> de experencia, con un equipo capacitado profesionalmente en el rubro. <br> <br>Nuestro OBJETIVO está enfocado en apoyar el sistema de gestión del área de mantención de nuestros clientes.</p>
-        <div class="social">
-          <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
-          <a href="#"><span class="fab fa-twitter"></span></a>
-          <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
-          <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"></span></a>
-        </div>
-      </div>
-    </div>
-    <!--UBICACIÓN-->
-    <div class="right box">
-      <h2 class="titulofooter">VALOR MONEDA</h2>
-      <div class="content">
-        <p>El valor de nuestros repuestos dependerá del valor actual del Dolar.</p>
-        <div class="bloque1dolar">
-        <h3 class="titulodolar">VALOR DOLAR</h3>
-        <div class="bloque2dolar">
-          <p id="dolar"></p>
-        </div>
-        <p class="textvalordia">Valor del día:</p>
-        <p id="fechadolar"></p>
-      </div>
-      </div>
-      
-    </div>
-    <!--VALOR MONEDA-->
-    <div class="center box">
-      <h2 class="titulofooter">Ubicación</h2>
-      <div class="content">
-        <div class="place">
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="text">Valparaíso, Chile.</span>
-        </div>
-        <div class="phone">
-          <span class="fas fa-phone-alt"></span>
-          <span class="text">+569 82400802</span>
-        </div>
-        <div class="email">
-          <span class="fas fa-envelope"></span>
-          <span class="text">hcabrera@empresa.cl</span>
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-title">
+              <span>AGREGAR</span><br>
+              <span>REPUESTO</span>
+            </div>
+          </div>
+          <div class="screen-body-item">
+            <form method="post" action="" id="form_agregar_repuestos">
+              {% csrf_token %}
+              <div class="form_group">
+                  {{ form.as_table }}
+              </div>
+              <input type="submit" class="btn btn-outline-success" id="enviar2" value="Enviar" onclick="mostrarAlerta()">
+                <input type="reset" class="btn btn-outline-warning" id="limpiar2" value="Limpiar" onclick="esconderAlerta()">
+              <div id="error2" role="alert"></div>
+                  <div class="errormensajeform">{{ mensaje }}</div>
+              </div>
+          </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="bottom">
-    <div class="bottoncenter">
-      <span class="credit">Creado por <a class="losfrozenteam" href="https://www.concierto.cl/wp-content/uploads/2020/10/174a3f4fa44c7bb22b3b6429cb4ea44c-768x432.png">LOS FROZEN TEAM</a> | </span>
-      <span class="far fa-copyright"></span><span> 2021 Todos los derechos reservados uwu.</span>
-    </div>
-  </div><!-----FIN---->
-</div>
-</footer>
 
 
-<!------------------------------------------------------------------------------------------------------------------------------->
-<!------------------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------OTRO------------------------------------------------------------------>
-<!--WHATSAPP FLOTANTE-->
-<a href="https://api.whatsapp.com/send?phone=+56982400802&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios." class="whatsappfloat" target="_blank">
-  <i class="fa fa-whatsapp my-whatsappfloat"></i>
-</a>
-
-<div>
-
-
-
-
-</div>
-
-<!--█ JAVASCRIPT █-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script src="{% static 'productos/js/jquery.numeric.js' %}"></script>
-<script src="{% static 'productos/js/clima.js' %}"></script>
-<script src="{% static 'productos/js/script.js' %}"></script>
-
-<script>
-  $( document ).ready(function() {
-    console.log( "ready!" ); 
-    /*Definir clases de imput aqui*/
-});
-</script>
-
-=======
-        
-
-    </div>
->>>>>>> parent of f2cfc5d (Modificación html formulario)
 
 </body>
-
-
 
 </html>

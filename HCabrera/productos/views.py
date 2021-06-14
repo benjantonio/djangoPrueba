@@ -1,18 +1,32 @@
-from django.shortcuts import render
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+from django.shortcuts import render, redirect
 from .models import Repuesto
 from .forms import RepuestoForm
+import time
+
+# FUNCION PARA LISTAR # 
 
 def home(request):
     ListaRepuesto = Repuesto.objects.all()
     datos = {
         'Repuesto':ListaRepuesto,
     }
-
     return render(request, 'productos/index.html',datos)
 
+#FUNCIÓN PARA INGRESAR PANEL ADMIN
+
+def panel_admin(request):
+    return render(request, 'productos/panel_admin.html')
+
+def panel_modificar_eliminar(request):
+    ListaRepuesto = Repuesto.objects.all()
+    datos = {
+        'Repuesto':ListaRepuesto,
+    }
+    return render(request, 'productos/panel_modificar_eliminar.html',datos)
+
+
+
+# FUNCION PARA AGREGAR #
 
 def form_repuesto(request):
     datos = {
@@ -26,44 +40,29 @@ def form_repuesto(request):
             datos['mensaje'] = 'Guardado Correctamente'
         else:
             datos['mensaje'] = 'ERROR. Ya exíste este ID..'
-<<<<<<< HEAD
-<<<<<<< HEAD
     return render(request,'productos/form_repuesto.html',datos)
 
 
+
+ # FUNCION PARA MODIFICAR #
 def form_mod_repuesto(request, id):
     repuesto = Repuesto.objects.get(idRepuesto=id)
 
     datos = {
         'form': RepuestoForm(instance=repuesto)
     }
+    if(request.method == 'POST'):
+        formulario = RepuestoForm(data=request.POST, instance=repuesto)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje'] = 'Modificados correctamente'
 
     return render(request, 'productos/form_mod_repuesto.html', datos)
-=======
 
-def home(request):
-    return render(request, 'productos/index.html')
->>>>>>> parent of b967b03 (Incorporación form)
-=======
+# FUNCION PARA ELIMINAR #
 
-def home(request):
-    return render(request, 'productos/index.html')
->>>>>>> parent of b967b03 (Incorporación form)
-=======
-
-def home(request):
-    return render(request, 'productos/index.html')
->>>>>>> parent of b967b03 (Incorporación form)
-=======
-    return render(request,'productos/form_repuesto.html',datos)
->>>>>>> parent of 8a155c2 (Modificación diseño tabla y creación mod_form)
-=======
-    return render(request,'productos/form_repuesto.html',datos) 
-
-def form_mod_repuesto(request,id):
-    repuesto = Repuesto.object.get(idRepuesto)
-    datos = {
-        'form': RepuestoForm(instance=repuesto)
-    }
-    return render(request,'core/form_mod_repuesto.html',datos)
->>>>>>> parent of f2cfc5d (Modificación html formulario)
+def form_del_repuesto(request, id):
+    time.sleep(5)
+    repuesto = Repuesto.objects.get(idRepuesto=id)
+    repuesto.delete()
+    return redirect(to='panel_modificar_eliminar')

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <!-- WHATSAPP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <!-- ANIMACIÓN AL CLICKEAR BOTÓN MENÚ -->
     <style>html {
         scroll-behavior: smooth;
@@ -45,14 +46,19 @@
       
                 </div>
       
-              <div class="col-sm-12 col-md-3 clima">
-                <div id="date"></div>
-                <p class="line">|</p>
+              <div class="col-sm-12 col-md-1 clima">
+
                 <div id="location"></div>
                 <p class="line">|</p>
                 <p>Temperatura</p>
                 <div class="information" id="temperature"></div>
               </div> 
+
+              <div class="col-sm-12 col-md-1 paneliniciarsesion">
+                <a class="iniciarsesion" href="{% url 'panel_admin' %}">Iniciar Sesión</a>
+              </div>
+
+              
             </div>
           
             
@@ -136,36 +142,7 @@
     </section>
 
     <!--▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ SECCIÓN 2 ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄-->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     
-=======
->>>>>>> parent of b967b03 (Incorporación form)
-=======
->>>>>>> parent of b967b03 (Incorporación form)
-=======
->>>>>>> parent of b967b03 (Incorporación form)
-=======
-    <div class="tablaprueba">
-        <table border="1">Lista de Repuestos
-            <tr>
-                <th>id</th>
-                <th>nombre</th>
-                <th>maquina</th>
-            </tr>
-            {% for veh in Repuesto%}
-            <tr></tr>
-                <td>{{veh.idRepuesto}}</td>
-                <td>{{veh.nombreRepuesto}}</td>
-                <td>{{veh.maquina}}</td>
-            </tr>
-            {% endfor %}
-        </table>
-        <a class="mas" href="{% url 'form_repuesto' %}">+</a>
-    </div>
->>>>>>> parent of 8a155c2 (Modificación diseño tabla y creación mod_form)
     <section id="sec2">
         <!--█████ CONÓCENOS █████-->
 
@@ -331,124 +308,32 @@
     <!-- ZONA INFORMACIÓN REPUESTOS-->
     <section id="sec4">
     <div class="barra-separadora">
-    <h2 class="textobarra">R E P U E S T O S</h2>
+        <h2 class="textobarra">R E P U E S T O S</h2>
      </div>
-<<<<<<< HEAD
+
 
      <!-- TABLA DE REPUESTOS -->
      <div class="tablarepuestos">
-        <table border="1">Lista de Repuestos
+        <table border="2" class="table titulotabla">
             <tr>
-                <th>ID</th>
                 <th class="titulostabla">REPUESTO</th>
                 <th class="titulostabla">MAQUINA</th>
                 <th class="titulostabla">DESCRIPCION</th>
-                <th scope="col">Modificar</th>
-<<<<<<< HEAD
-                <th scope="col">Eliminar</th>
-=======
->>>>>>> parent of f2cfc5d (Modificación html formulario)
             </tr>
             {% for veh in Repuesto%}
             <tr></tr>
-                <td>{{veh.idRepuesto}}</td>
                 <td class="titulostabla">{{veh.nombreRepuesto}}</td>
                 <td class="titulostabla">{{veh.maquina}}</td>
                 <td class="titulostabla">{{veh.descripcionRepuesto}}</td>
-                <td>
-<<<<<<< HEAD
-                    <a href="{% url 'form_mod_repuesto' veh.idRepuesto %}"><img src="{% static 'formulario/img/modificar.png' %}" alt="">Modificar</a>
-                </td>
-                <td>
-                    <a href="{% url 'form_mod_repuesto' veh.idRepuesto %}"><img src="{% static 'formulario/img/borrar.png' %}" alt="">Eliminar</a>
-=======
-                    <a href="{% url 'form_del_repuesto' veh.idRepuesto %}"></a>
->>>>>>> parent of f2cfc5d (Modificación html formulario)
-                </td>
             </tr>
             {% endfor %}
         </table>
-        <a class="mas" href="{% url 'form_repuesto' %}">+</a>
     </div>
 
+
         <!-- FIN REPUESTOS-->
-=======
-        <div class="col-md-12">
-            <div class="row clearfix cuadroImagen">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="boxs project_widget">
-                        <div class="pw_img">
-                            <img class="img-responsive imagenRepuesto" src="{% static 'productos/img/Repuestos/Rodamientos.jpg' %}" alt="About the image">
-                        </div>
-                        <div class="pw_content text-center">
-                            <div class="pw_header">
-                                <p class="descripcionRepuesto"> RODAMIENTOS</p>
-                                <small>Reach Stackers</small>
-                            </div>
-                            <div class="pw_meta">
-                                <span>Los rodamientos son una de las piezas de maquinaria más utilizadas, ayudan al movimiento giratorio. 
-                                    Además ayuda a reducir la fricción entre los distintos elementos.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="boxs project_widget">
-                        <div class="pw_img">
-                            <img class="img-responsive imagenRepuesto" src="{% static 'productos/img/Repuestos/Filtro.jpg' %}" alt="About the image">
-                        </div>
-                        <div class="pw_content text-center">
-                            <div class="pw_header">
-                                <p class="descripcionRepuesto"> FILTROS</p>
-                                <small>Reach Stackers</small>
-                            </div>
-                            <div class="pw_meta">
-                                <span>Un filtro hidráulico es el componente principal de filtración, lubricación y engrase.  
-                                    Se utilizan para el control de la contaminación  generada por procesos de desgastes de la maquinaria.</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="boxs project_widget">
-                        <div class="pw_img">
-                            <img class="img-responsive imagenRepuesto" src="{% static 'productos/img/Repuestos/FrenosDisco.jpg' %}" alt="About the image">
-                        </div>
-                        <div class="pw_content text-center">
-                            <div class="pw_header">
-                                <p class="descripcionRepuesto"> FRENOS DISCO</p>
-                                <small>Reach Stackers</small>
-                            </div>
-                            <div class="pw_meta">
-                                <span>Los discos de freno son empleados para garantizar la reducción de la velocidadde la máquina. 
-                                    Se debe a la fricción que se crea cuando los frenos atrapan el disco al accionar el pedal.</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="boxs project_widget">
-                        <div class="pw_img">
-                            <img class="img-responsive imagenRepuesto" src="{% static 'productos/img/Repuestos/SistemaPlanetario.jpg' %}" alt="About the image">
-                        </div>
-                        <div class="pw_content text-center">
-                            <div class="pw_header">
-                                <p class="descripcionRepuesto"> ENGRANAJES</p>
-                                <small>Reach Stackers</small>
-                            </div>
-                            <div class="pw_meta">
-                                <span>El engranaje planetario se usa aquí para aumentar la velocidad de salida. Un engranaje  es un sistema de engranajes externos o satélites que rotan sobre un engranaje central.</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- FIN REPUESTOS-->
->>>>>>> parent of 8a155c2 (Modificación diseño tabla y creación mod_form)
        
+
 
        <!--MARCAS CARRUSEL-->
        <div class="fondoImagenM">
