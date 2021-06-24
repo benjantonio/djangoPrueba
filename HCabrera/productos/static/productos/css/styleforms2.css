@@ -118,6 +118,13 @@ body {
     text-align: center;
 }
 
+.botonapi{
+    margin-right: 29vh;
+    margin-top: 30px;
+    background-color: #00000070;
+    text-align: center;
+}
+
 @media screen and (max-width: 1800px) {
     .boton1{
         margin-left: 22vh;
@@ -126,6 +133,8 @@ body {
     .boton2{
         margin-right: 22vh;
     }
+
+
 }
 
 @media screen and (max-width: 1490px) {
@@ -136,6 +145,8 @@ body {
     .boton2{
         margin-right: 15vh;
     }
+
+
 }
 
 
@@ -150,13 +161,23 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .descripcionrepuestos{
+        margin-right: 0;
+    }
+
+    .titulorepuestos{
+        margin-right: 0;
+    }
+    
     .boton1{
         margin-left: 0vh;
+        margin-right: 0;
     }
     
     .boton2{
         margin-top: 20px;
         margin-left: 0vh;
+        margin-right: 0;
     }
 }
 
@@ -528,3 +549,4 @@ label {
     color: #f5d000;
 }
 
+/*------ */
