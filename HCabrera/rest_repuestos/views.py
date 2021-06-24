@@ -9,7 +9,6 @@ from .serializers import RepuestoSerializer
 
 @csrf_exempt
 @api_view(['GET','POST'])
-
 def lista_repuestos(request):
     if request.method == 'GET':
         repuesto = Repuesto.objects.all()
