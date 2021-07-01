@@ -23,3 +23,24 @@ def lista_repuestos(request):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['GET','PUT','DELETE'])
+def detalle_repuestos(request,id):
+    try:
+        repuesto = Repuesto.objects.get(idRepuesto=id)
+    except Repuesto.DoesNotExist: 
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = Repuesto(repuesto)
+        return Response(serializer.data)
+    if request.method == 'PUT':
+        data = JSONParser().parse(request)
+        serializer = RepuestoSerializer(repuesto,data=data)
+        if(serializer.is_valid()):
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'DELETE':
+        repuesto.delete()
+        return Response(status=status.HTTP_204_NOT_CONTENT)
