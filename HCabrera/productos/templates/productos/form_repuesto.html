@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Repuesto</title>
+    <link rel="stylesheet" type="text/css" href="maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- FOOTER -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- WHATSAPP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- ANIMACIÓN AL CLICKEAR BOTÓN MENÚ -->
+    <style>html {
+        scroll-behavior: smooth;
+    }</style>
+
+
+    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/styleforms2.css' %}">   
+</head>
+
+<body>
+
+    <!--SECCIÓN PORTADA-->
+    <section id="secportada">
+        <img class="imagenportada" src="{% static 'productos/img/panelhcabrera2.png' %}" alt="imagenportada">
+    </section>
+  
+  <!--BOTON VOLVER-->
+<div class="text-box">
+    <a href="{% url 'panel_admin' %}" class="btn btn-white btn-        animate">Volver</a>
+  </div>
+  
+  <section id="sectitulo">
+    <p class="titulorepuestos">AGREGAR</p>
+  </section>
+  
+
+  <div class="ventana-contacto" >
+    <div class="container">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+          </div>
+        </div>
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-title">
+              <span>AGREGAR</span><br>
+              <span>REPUESTO</span>
+            </div>
+          </div>
+          <div class="screen-body-item">
+            <form method="post" action="" id="form_agregar_repuestos">
+              {% csrf_token %}
+              <div class="form_group">
+                  {{ form.as_table }}
+              </div>
+              <input type="submit" class="btn btn-outline-success" id="enviar2" value="Enviar" onclick="mostrarAlerta()">
+                <input type="reset" class="btn btn-outline-warning" id="limpiar2" value="Limpiar" onclick="esconderAlerta()">
+              <div id="error2" role="alert"></div>
+                  <div class="errormensajeform">{{ mensaje }}</div>
+              </div>
+          </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
