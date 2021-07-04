@@ -58,6 +58,12 @@
                 <a class="iniciarsesion" href="{% url 'panel_admin' %}">Iniciar Sesión</a>
               </div>
 
+                {% if request.user.is_autenticated and user.username= "admin" %}
+              <div class="col-sm-12 col-md-1 paneliniciarsesion">
+                <a class="iniciarsesion" href="{% url 'panel_admin' %}">Panel</a>
+              </div>
+              {% endif %}
+
               
             </div>
           
