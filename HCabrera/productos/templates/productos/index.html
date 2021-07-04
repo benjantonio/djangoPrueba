@@ -312,6 +312,9 @@
      </div>
 
 
+
+
+
      <!-- TABLA DE REPUESTOS -->
      <div class="row" id="itemstabla">
         <table class="table" id="tablarepuestos">
@@ -330,10 +333,12 @@
             </tbody>
         </table>
     </div>
-
-
-        <!-- FIN REPUESTOS-->
+        <!-- FIN TABLA-->
        
+
+
+
+
 
 
        <!--MARCAS CARRUSEL-->
@@ -561,18 +566,6 @@
         $(document).ready(function(){
             $.getJSON('http://127.0.0.1:8000/api/lista-repuestos', function(data){
             var repuestos = data;
-            var today = new Date();
-            var dd = today.getDate();
-            var mm = today.getMonth() + 1;
-            var yyyy = today.getFullYear();
-
-            if (dd < 10){
-                dd = '0' + mm;
-            }
-            if (mm < 10) {
-                mm = '0' + mm;
-            }
-            var today = dd + '/' + mm + '/' + yyyy;
 
             $.each(repuestos, function(i, item) {
                 $('#nomre').append("<tr><td>" + item.nombreRepuesto);
