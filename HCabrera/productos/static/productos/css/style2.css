@@ -4,7 +4,7 @@
 /* ✿BODY✿ ◕‿◕*/
 
 body {
-    background-color: #f1f1f1;
+    background-color: #f3f3f3;
     color: #000000;
 }
 
@@ -13,7 +13,7 @@ body {
 
 
 /*========== HEADER SUPERIOR ==========*/
-.paneliniciarsion{
+.paneliniciarsesion{
     text-align: right;
     margin-left: 15vh;
 }
@@ -589,16 +589,11 @@ body {
 
 /*▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ SECCIÓN 4 ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄*/
 
-
 .tablarepuestos{
-    margin-left: 40vh;
-    margin-right: 30vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    color: #ffffff;
 }
-
-.titulostabla{
-    padding-left: 20px;
-}
-
 /*FIN TIPO REPUESTOS*/
 
 .imagenRepuesto {
@@ -788,7 +783,7 @@ body {
 }
 
 #bEnviar:hover {
-    color: #98d3a2;
+    color: #bed398;
 }
 
 .mensaje-contacto {
@@ -835,12 +830,12 @@ body {
 /*ESTILO PARA ERRORES*/
 
 .errores {
-    -webkit-box-shadow: 0 0 10px rgba(45, 17, 168, 0.3);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background: rgba(214, 0, 0, 0.89);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    color: rgb(7, 228, 106);
+    color: #fff;
     display: none;
     font-size: 14px;
     margin-top: -40px;
@@ -879,7 +874,7 @@ body {
 @media screen and (max-width: 731px) {
     .errores {
         margin-left: -140px;
-        background: rgba(241, 3, 3, 0.747);
+        background: rgba(223, 1, 1, 0.747);
     }
 }
 
@@ -1191,46 +1186,6 @@ footer {
 }
 
 
-.formulario-agregar{
-    padding-top: 13vh;
-    padding-left: 10px;
-    
-
-}
-
-
-/* BOTONES DE FORMULARIO AGREGAR */
-
-#enviar2 {
-    background: none;
-    border: none;
-    color: #f5d000;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-#enviar2:hover {
-    color: #25df44;
-}
-
-#limpiar2 {
-    background: none;
-    border: none;
-    color: #f5d000;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
-}
-#limpiar2:hover {
-    color: #dfee0b;
-}
-
-
-
-
-
 /*-------------FIN-------------*/
 
 
@@ -1285,54 +1240,15 @@ footer {
 /*#######################################################################################################*/
 
 
-
-
-
-
-
-/*-------------------------------------Form_repuesto.html------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------------*/
-
-
-#enviar2 {
-    background: none;
-    border: none;
-    color: #25df44;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
-    background-color: #0000002a;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+#tablarepuestos{
     
-}
-#enviar2:hover {
-    color: #58ec71;
-}
-
-#limpiar2 {
-    background: none;
-    border: none;
-    color: #ffac13;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    background-color: #0000002a;
-}
-#limpiar2:hover {
-    color: #ffbe47;
-}
-
-label {
-    display: inline-block;
-    margin-bottom: .5rem;
-    color: wihte;
+    background: linear-gradient(to bottom, #494949b6, #111111d7);
+    margin-left: 50vh;
+    width: 100vh;
     color: white;
 }
 
-.errormensajeform{
-    color: #f5d000;
-}
+
+
+
 

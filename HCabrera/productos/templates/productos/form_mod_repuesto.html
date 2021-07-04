@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Repuesto</title>
+    <title>Modificar Repuesto</title>
     <link rel="stylesheet" type="text/css" href="maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
@@ -30,20 +30,19 @@
 
 <body>
 
-    <!--SECCIÓN PORTADA-->
+
     <section id="secportada">
         <img class="imagenportada" src="{% static 'productos/img/panelhcabrera2.png' %}" alt="imagenportada">
     </section>
   
   <!--BOTON VOLVER-->
 <div class="text-box">
-    <a href="{% url 'panel_admin' %}" class="btn btn-white btn-        animate">Volver</a>
+    <a href="{% url 'panel_modificar_eliminar' %}" class="btn btn-white btn-        animate">Volver</a>
   </div>
   
   <section id="sectitulo">
-    <p class="titulorepuestos">AGREGAR</p>
+    <p class="titulorepuestos">MODIFICAR</p>
   </section>
-  
 
   <div class="ventana-contacto" >
     <div class="container">
@@ -63,7 +62,7 @@
         <div class="screen-body">
           <div class="screen-body-item left">
             <div class="app-title">
-              <span>AGREGAR</span><br>
+              <span>MODIFICAR</span><br>
               <span>REPUESTO</span>
             </div>
           </div>
@@ -89,6 +88,13 @@
 
 
 
+
+
+    <script src="ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+    <script src="maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
 </body>
+
+
 
 </html>
