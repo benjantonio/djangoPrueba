@@ -25,6 +25,7 @@ def panel_modificar_eliminar(request):
     return render(request, 'productos/panel_modificar_eliminar.html',datos)
 
 
+
 # FUNCION PARA AGREGAR #
 
 def form_repuesto(request):

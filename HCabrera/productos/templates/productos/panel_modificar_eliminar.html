@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  
     <!-- FOOTER -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <!-- WHATSAPP -->
@@ -25,16 +26,17 @@
     }</style>
 
 
-    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/styleforms3.css' %}">   
+    <link type="text/css" rel="stylesheet" href="{% static 'productos/css/styleforms2.css' %}">   
 </head>
 
 
+
 <script type="text/javascript">
-    function ConfirmDelete()
+    function ConfirmDelete2()
         {
-            var respuesta = confirm("¿Estás seguro de que desesas eliminar este Repuesto?");
+            var respuesta = confirm("¿Estás seguro que quieres eliminar este Repuesto?");
             if (respuesta == true)
-            {
+                {
                 Swal.fire({
                     title: "¡ELIMINADO!",
                     text: "Se eliminado el repuesto con éxito ✔",
@@ -63,15 +65,18 @@
   <img class="imagenportada" src="{% static 'productos/img/panelhcabrera2.png' %}" alt="imagenportada">
 </section>
 
-
+<!--BOTON VOLVER-->
 <div class="text-box">
-    <a href="{% url 'panel_admin'%}" class="btn btn-white btn-        animate">Volver</a>
-</div>
+    <a href="{% url 'panel_admin' %}" class="btn btn-white btn-        animate">Volver</a>
+  </div>
 
 
 <section id="sectitulo">
   <p class="titulorepuestos">LISTA DE REPUESTOS</p>
 </section>
+
+
+
 
 <div class="tablarepuestos">
     <table border="2" class="table">
@@ -91,7 +96,7 @@
                 <a href="{% url 'form_mod_repuesto' veh.idRepuesto %}" class="descripcionmodificar">Modificar</a>
             </td>
             <td>
-                <a href="{% url 'form_del_repuesto' veh.idRepuesto %}" class="descripcioneliminar" onclick="return ConfirmDelete()">Eliminar</a>
+                <a href="{% url 'form_del_repuesto' veh.idRepuesto %}" class="descripcioneliminar" onclick="return ConfirmDelete2()">Eliminar</a>
             </td>
         </tr>
         {% endfor %}
