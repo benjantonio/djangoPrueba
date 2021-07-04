@@ -5,6 +5,21 @@
 const formulario = document.getElementById("formulario");
 const inputs = document.querySelectorAll("#formulario input");
 
+function ConfirmDelete()
+        {
+            var respuesta = confirm("¿Estás seguro de que desesas eliminar el Repuesto?");
+
+            if (respuesta == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false
+            }
+        }
+
+
 const validarFormulario = (e) => {
     if(e.target.name == 'nombre'){
         var nombre = $("#itNombre").val();
