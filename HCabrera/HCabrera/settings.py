@@ -71,6 +71,14 @@ TEMPLATES = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+    'rest_framework.authentication.TokenAuthentication',
+    ],
+    }
+
+
+0
 WSGI_APPLICATION = 'HCabrera.wsgi.application'
 
 

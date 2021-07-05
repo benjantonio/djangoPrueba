@@ -25,5 +25,5 @@ def login(request):
     if not pass_valido:
         return Response("Password incorrecta")
 
-    token, created = Token.onject.get_or_create(user=user)
+    token, created = Token.objects.get_or_create(user=user)
     return Response(token.key)
