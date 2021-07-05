@@ -13,7 +13,6 @@ from rest_framework.permissions import IsAuthenticated
 
 @csrf_exempt
 @api_view(['GET','POST'])
-@permission_classes((IsAuthenticated,))
 def lista_repuestos(request):
     if request.method == 'GET':
         repuesto = Repuesto.objects.all()
@@ -29,6 +28,7 @@ def lista_repuestos(request):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET','PUT','DELETE'])
+@permission_classes((IsAuthenticated,))
 def detalle_repuestos(request,id):
     try:
         repuesto = Repuesto.objects.get(idRepuesto=id)

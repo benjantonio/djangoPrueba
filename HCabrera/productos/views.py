@@ -15,7 +15,13 @@ def home(request):
 #FUNCIÓN PARA INGRESAR PANEL ADMIN
 
 def panel_admin(request):
-    return render(request, 'productos/panel_admin.html')
+    user = request.user
+    if user.has_perm('productos.admin'):
+        return render(request, 'productos/panel_admin.html')
+    else:
+        return redirect(to=home)
+
+
 
 def panel_modificar_eliminar(request):
     ListaRepuesto = Repuesto.objects.all()
@@ -66,3 +72,5 @@ def form_del_repuesto(request, id):
     repuesto = Repuesto.objects.get(idRepuesto=id)
     repuesto.delete()
     return redirect(to='panel_modificar_eliminar')
+
+
